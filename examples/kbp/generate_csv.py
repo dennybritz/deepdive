@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 from bs4 import BeautifulSoup
-import nltk, re, pprint, os
+import nltk, re, pprint, os, codecs, sys
 
 '''
 This script converts raw mention data and freebase entity data into CSV
@@ -13,7 +13,7 @@ Output entity CSV file: <entity id>,<entity type>,<entity name>
 Input mention file: sgm (like XML), with relevant text inside
 the <text> tag: <text>relevant text</text>
 Output mention CSV file:
-    <mention id>,<doc id>,<sentence id>,<mention type>,<mention text>
+    <doc id>,<sentence id>,<mention type>,<mention text>
 
 1. Process raw mentions and perform NER using NLTK. Extract the 
 appropriately-tagged mentions (PER, ORG, etc.) and write to CSV file. 
@@ -28,6 +28,9 @@ for illustrative purposes.
 ###
 # CONSTANTS
 ###
+
+# delimiter for CSV files
+delim = '\t'
 
 FB_PREFIX = '<http://rdf.freebase.com/ns/'
 OBJ_TYPE = '<http://rdf.freebase.com/ns/type.object.type>'
@@ -56,9 +59,6 @@ fb_output_file = 'data/freebase/kbp_entities_fb.csv'
 # unique id for each sentence (incremented after each new sentence in mentions)
 sentence_id = 1
 
-# unique id for each mention
-mention_id = 1
-
 '''
 Input: data_file (file object) - handle to input data file to be processed,
        out_file (file object) - handle to output csv file
@@ -68,10 +68,11 @@ Write the processed data to the output file.
 '''
 def process_mention(data_file, out_file):
     global sentence_id
-    global mention_id
 
     # use a library to get all the raw text inside the <text> tag
-    s = BeautifulSoup(data_file.read())
+    contents = data_file.read()
+
+    s = BeautifulSoup(contents)
     text_contents = s.find('text').text
 
     # POS tagging on sentences
@@ -86,9 +87,8 @@ def process_mention(data_file, out_file):
         for child in chunked_sent.subtrees():
             if child.node == PER:
                 node_value = ' '.join([x[0] for x in child])
-                out_file.write(','.join([str(mention_id), data_file.name.split('/')[-1], \
-                    str(sentence_id), node_value, child.node]) + '\n')
-                mention_id += 1
+                out_file.write(delim.join([data_file.name.split('/')[-1], \
+                    str(sentence_id), node_value.encode("utf-8").__repr__()[1:-1], child.node]) + '\n')
         
         sentence_id += 1
 
@@ -130,7 +130,7 @@ def process_entity(data_file, out_file):
             # do stuff to this entity if it is a person
             if FB_PER in curr_subj_dict[OBJ_TYPE]:
                 # get the entity id
-                eid = prev_subject.replace(FB_PREFIX, '').replace('.', '_').replace('>', '')
+                eid = prev_subject.replace(FB_PREFIX, '').replace('.', '_')[:-1]
 
                 # check if this person has a name, though this should never be false
                 if OBJ_NAME in curr_subj_dict:
@@ -148,7 +148,11 @@ def process_entity(data_file, out_file):
                         name = names[0]
 
                     # write to output file
-                    out_file.write(','.join([eid, PER, name]) + '\n')
+                    name = name.encode("utf-8")
+                    try:
+                        out_file.write(delim.join([eid, PER, name.__repr__()[1:-1]]) + '\n')
+                    except:
+                        print name.__repr__()
 
             # clear the temporary storage
             curr_subj_dict.clear()
@@ -165,7 +169,6 @@ def process_entity(data_file, out_file):
 
         # moving on to the next line so remember the current subject
         prev_subject = subject
-         
 
 '''
 Input: rootdir (string) - directory containing raw data files
@@ -183,26 +186,34 @@ def process_all_files(rootdir, process_function, out_file):
         for folder in subfolders:
             process_all_files(os.path.join(root, folder), process_function, out_file)
         for filename in files:
-            with open(os.path.join(root, filename), 'r') as data_file:
-                process_function(data_file, out_file)
+            with codecs.open(os.path.join(root, filename), 'r', 'utf-8') as data_file:
+                if not filename.startswith('.'): # ignore hidden files
+                    process_function(data_file, out_file)
 
 ###
 # MAIN
 ###
 
 if  __name__ == '__main__':
-    print "Processing mentions..."
+    # check for presence of freebase data file (since it is large)
+    fb_file = os.path.join(fb_datadir, 'freebase_per_org_loc_sample.rdf')
+    if not os.path.isfile(fb_file):
+        print "You do not have the necessary freebase data file (~350mb). Download to " + \
+        "data/freebase/raw from: " + \
+        "https://www.dropbox.com/s/vfzr1d8rs0d1lb4/freebase_per_org_loc_sample.rdf"
+    elif os.path.isdir(nw_datadir) and os.listdir(nw_datadir) == []:
+        print "You do not have the necessary newswire data files (~1.4gb). Download to" + \
+        "data/newswire/raw from: " + \
+        "https://www.dropbox.com/sh/y282opz0wlvda0x/J0TeAhR2Si"
+    else:
+        print "Processing mentions..."
+        outputfile = codecs.open(nw_output_file, 'w', 'utf-8')
+        process_all_files(nw_datadir, process_mention, outputfile)
+        outputfile.close()  
 
-    # process the mentions
-    outputfile = open(nw_output_file, 'w')
-    process_all_files(nw_datadir, process_mention, outputfile)
-    outputfile.close()  
+        print "Processing entities..."
+        outputfile = codecs.open(fb_output_file, 'w', 'utf-8')
+        process_all_files(fb_datadir, process_entity, outputfile)
+        outputfile.close()
 
-    print "Processing entities..."
-
-    # process the entities
-    outputfile = open(fb_output_file, 'w')
-    process_all_files(fb_datadir, process_entity, outputfile)
-    outputfile.close()
-
-    print "Done."
+        print "Done."

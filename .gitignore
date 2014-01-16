@@ -4,7 +4,5 @@ target/
 app/
 log/
 examples/kbp/data/
-!examples/kbp/data/freebase/raw
-!examples/kbp/data/newswire/raw
 *.sublime-project
 *.sublime-workspace
