@@ -107,7 +107,6 @@ def process_entity(data_file, out_file):
     #   subj1 pred1 obj1
     #   subj1 pred3 obj3
     #   subj2 pred4 obj4
-    #   subj2 pred5 obj5
     #   ...
 
     # each subject has many predicates
@@ -125,14 +124,11 @@ def process_entity(data_file, out_file):
         predicate = vals[1].strip() # e.g., type.object.type or type.object.name
         obj = vals[2].strip() # e.g., people.person
 
-        # new subject (skips first line when prev_subject is '')
         if subject != prev_subject and prev_subject != '':
-            # do stuff to this entity if it is a person
-            if FB_PER in curr_subj_dict[OBJ_TYPE]:
-                # get the entity id
+            if OBJ_TYPE in curr_subj_dict and FB_PER in curr_subj_dict[OBJ_TYPE]:
                 eid = prev_subject.replace(FB_PREFIX, '').replace('.', '_')[:-1]
 
-                # check if this person has a name, though this should never be false
+                # check if this person has a name; this should never be false
                 if OBJ_NAME in curr_subj_dict:
                     names = curr_subj_dict[OBJ_NAME]
                     name = ''
@@ -143,16 +139,13 @@ def process_entity(data_file, out_file):
                             name = n.replace('\"', '').replace('@en', '')
                             break
 
-                    # couldn't find an english name, so take the first one
+                    # couldn't find an english name, so just take the first one
                     if name == '':
                         name = names[0]
 
                     # write to output file
                     name = name.encode("utf-8")
-                    try:
-                        out_file.write(delim.join([eid, PER, name.__repr__()[1:-1]]) + '\n')
-                    except:
-                        print name.__repr__()
+                    out_file.write(delim.join([eid, PER, name.__repr__()[1:-1]]) + '\n')
 
             # clear the temporary storage
             curr_subj_dict.clear()
@@ -196,15 +189,17 @@ def process_all_files(rootdir, process_function, out_file):
 
 if  __name__ == '__main__':
     # check for presence of freebase data file (since it is large)
-    fb_file = os.path.join(fb_datadir, 'freebase_per_org_loc_sample.rdf')
-    if not os.path.isfile(fb_file):
-        print "You do not have the necessary freebase data file (~350mb). Download to " + \
-        "data/freebase/raw from: " + \
-        "https://www.dropbox.com/s/vfzr1d8rs0d1lb4/freebase_per_org_loc_sample.rdf"
-    elif os.path.isdir(nw_datadir) and os.listdir(nw_datadir) == []:
-        print "You do not have the necessary newswire data files (~1.4gb). Download to" + \
-        "data/newswire/raw from: " + \
-        "https://www.dropbox.com/sh/y282opz0wlvda0x/J0TeAhR2Si"
+    # fb_file = os.path.join(fb_datadir, 'freebase_per_org_loc_sample.rdf')
+    # if not os.path.isfile(fb_file):
+    #     print "You do not have the necessary freebase data file (~350mb). Download to " + \
+    #     "data/freebase/raw from: " + \
+    #     "https://www.dropbox.com/s/vfzr1d8rs0d1lb4/freebase_per_org_loc_sample.rdf"
+    # elif os.path.isdir(nw_datadir) and os.listdir(nw_datadir) == []:
+    #     print "You do not have the necessary newswire data files (~1.4gb). Download to" + \
+    #     "data/newswire/raw from: " + \
+    #     "https://www.dropbox.com/sh/y282opz0wlvda0x/J0TeAhR2Si"
+    if False:
+        pass
     else:
         print "Processing mentions..."
         outputfile = codecs.open(nw_output_file, 'w', 'utf-8')
@@ -212,8 +207,8 @@ if  __name__ == '__main__':
         outputfile.close()  
 
         print "Processing entities..."
-        outputfile = codecs.open(fb_output_file, 'w', 'utf-8')
-        process_all_files(fb_datadir, process_entity, outputfile)
-        outputfile.close()
+        #outputfile = codecs.open(fb_output_file, 'w', 'utf-8')
+        #process_all_files(fb_datadir, process_entity, outputfile)
+        #outputfile.close()
 
         print "Done."
