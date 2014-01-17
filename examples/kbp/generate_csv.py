@@ -8,12 +8,12 @@ This script converts raw mention data and freebase entity data into CSV
 format for KBP entity linking.
 
 Input entity file: <subject>\t<predicate>\t<object>\t.
-Output entity CSV file: <entity id>,<entity type>,<entity name>
+Output entity CSV file: <entity id>,<entity name>,<entity type>
 
 Input mention file: sgm (like XML), with relevant text inside
 the <text> tag: <text>relevant text</text>
 Output mention CSV file:
-    <doc id>,<sentence id>,<mention type>,<mention text>
+    <doc id>,<sentence id>,<mention text>,<mention type>
 
 1. Process raw mentions and perform NER using NLTK. Extract the 
 appropriately-tagged mentions (PER, ORG, etc.) and write to CSV file. 
@@ -69,6 +69,8 @@ Write the processed data to the output file.
 def process_mention(data_file, out_file):
     global sentence_id
 
+    doc_id, extension = os.path.splitext(data_file.name)
+
     # use a library to get all the raw text inside the <text> tag
     contents = data_file.read()
 
@@ -87,8 +89,10 @@ def process_mention(data_file, out_file):
         for child in chunked_sent.subtrees():
             if child.node == PER:
                 node_value = ' '.join([x[0] for x in child])
-                out_file.write(delim.join([data_file.name.split('/')[-1], \
-                    str(sentence_id), node_value.encode("utf-8").__repr__()[1:-1], child.node]) + '\n')
+
+                # <doc id>,<sentence id>,<mention text>,<mention type>
+                out_file.write(delim.join([doc_id, str(sentence_id), \
+                    node_value.encode("utf-8").__repr__()[1:-1], child.node]) + '\n')
         
         sentence_id += 1
 
@@ -145,7 +149,9 @@ def process_entity(data_file, out_file):
 
                     # write to output file
                     name = name.encode("utf-8")
-                    out_file.write(delim.join([eid, PER, name.__repr__()[1:-1]]) + '\n')
+
+                    # <entity id>,<entity name>,<entity type>
+                    out_file.write(delim.join([eid, name.__repr__()[1:-1]], PER) + '\n')
 
             # clear the temporary storage
             curr_subj_dict.clear()
@@ -183,32 +189,16 @@ def process_all_files(rootdir, process_function, out_file):
                 if not filename.startswith('.'): # ignore hidden files
                     process_function(data_file, out_file)
 
-###
-# MAIN
-###
 
 if  __name__ == '__main__':
-    # check for presence of freebase data file (since it is large)
-    # fb_file = os.path.join(fb_datadir, 'freebase_per_org_loc_sample.rdf')
-    # if not os.path.isfile(fb_file):
-    #     print "You do not have the necessary freebase data file (~350mb). Download to " + \
-    #     "data/freebase/raw from: " + \
-    #     "https://www.dropbox.com/s/vfzr1d8rs0d1lb4/freebase_per_org_loc_sample.rdf"
-    # elif os.path.isdir(nw_datadir) and os.listdir(nw_datadir) == []:
-    #     print "You do not have the necessary newswire data files (~1.4gb). Download to" + \
-    #     "data/newswire/raw from: " + \
-    #     "https://www.dropbox.com/sh/y282opz0wlvda0x/J0TeAhR2Si"
-    if False:
-        pass
-    else:
-        print "Processing mentions..."
-        outputfile = codecs.open(nw_output_file, 'w', 'utf-8')
-        process_all_files(nw_datadir, process_mention, outputfile)
-        outputfile.close()  
+    print "Processing mentions..."
+    outputfile = codecs.open(nw_output_file, 'w', 'utf-8')
+    process_all_files(nw_datadir, process_mention, outputfile)
+    outputfile.close()  
 
-        print "Processing entities..."
-        #outputfile = codecs.open(fb_output_file, 'w', 'utf-8')
-        #process_all_files(fb_datadir, process_entity, outputfile)
-        #outputfile.close()
+    print "Processing entities..."
+    outputfile = codecs.open(fb_output_file, 'w', 'utf-8')
+    process_all_files(fb_datadir, process_entity, outputfile)
+    outputfile.close()
 
-        print "Done."
+    print "Done."
