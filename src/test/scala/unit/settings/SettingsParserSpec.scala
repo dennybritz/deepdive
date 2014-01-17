@@ -46,6 +46,17 @@ class SettingsParserSpec extends FunSpec with PrivateMethodTester {
         Extractor("extractor1", "entities", "SELECT * FROM documents", "udf/entities.py", 
           4, 100, 1000, Set("extractor2"), Option("/bin/cat"), Option("/bin/dog"))), 5))
     }
+
+    it("should fail when the input query is not defined") {
+      val config = ConfigFactory.parseString("""
+      extraction.extractors.extractor1.output_relation: "entities"
+      extraction.extractors.extractor1.udf: "udf/entities.py"
+      """).withFallback(defaultConfig)
+      val loadExtractionSettings = PrivateMethod[ExtractionSettings]('loadExtractionSettings)
+      intercept[Exception] {
+        val result = SettingsParser invokePrivate loadExtractionSettings(config)
+      }
+    }
   }
 
   describe("Parsing Inference Settings") {
@@ -118,14 +129,16 @@ class SettingsParserSpec extends FunSpec with PrivateMethodTester {
       val config = ConfigFactory.parseString("""
         pipeline.run: p1
         pipeline.pipelines {
-          p1 : ["f1", "inference", "calibration", "report", "shutdown"]
+          p1 : ["f1", "f2"]
+          p2 : ["f2", "f3"]
         }
       """)
       val loadPipelineSettings = PrivateMethod[PipelineSettings]('loadPipelineSettings)
       val result = SettingsParser invokePrivate loadPipelineSettings(config)
       assert(result == PipelineSettings(Some("p1"), 
-        List(Pipeline("p1", Set("f1", "inference", "calibration", "report", "shutdown")))
+        List(Pipeline("p1", Set("f1", "f2")), Pipeline("p2", Set("f2", "f3")))
       ))
+      assert(result.activePipeline.get == Pipeline("p1", Set("f1", "f2")))
     }
 
     it ("should work when not specified") {
