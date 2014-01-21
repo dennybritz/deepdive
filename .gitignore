@@ -3,8 +3,5 @@
 target/
 app/
 log/
-examples/kbp/data/
 *.sublime-project
 *.sublime-workspace
-examples/kbp/data/newswire/kbp_mentions_nw.csv
-examples/kbp/data/freebase/kbp_entities_fb.csv
