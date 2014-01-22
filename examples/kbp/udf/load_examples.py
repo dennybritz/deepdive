@@ -4,86 +4,66 @@ import fileinput
 import json
 import sys
 
-# Helper to construct a string dictionary key for a given mention
-def create_key(docid, sentid, text_contents):
-  return "<>".join([docid, sentid, text_contents])
-  
-
 '''
 Load the positive and negative examples and store in memory.
 '''
 
 pos_ex_file = "../data/training/positive_examples.csv"
-neg_ex_file = "../data/training/positive_examples.csv"
+neg_ex_file = "../data/training/negative_examples.csv"
 
 delim = '\t'
 
-# store negative and positive examples in memory
+# store positive examples in memory
 
-# key (string concat of docid, sentid, contents) -> eid
+# text_contents -> eid
 positive_ex = {}
+negative_ex = {}
 
-# set of keys (string concat of docid, sentid, contents)
-negative_ex = set()
+# loads the examples from the filename into the provided dict
+def load_examples(examples, filename):
+  # examples: doc_id  sent_id text_contents type  entity_id
+  f = open(filename, 'r')
+  for line in f:
+    vals = line.split(delim)
+    text_contents = vals[2].strip()
+    eid = vals[4].strip()
 
-# positive examples: doc_id  sent_id text_contents type  entity_id
-f = open(pos_ex_file, 'r')
-for line in f:
-  vals = line.split(delim)
+    # we are identifying an entity by its text contents; reasonable to assume that
+    # a mention whose text exactly matches the text of some entity will be linked to that entity
+    examples[text_contents] = eid
+  f.close()
 
-  docid = vals[0].strip()
-  sentid = vals[1].strip()
-  text_contents = vals[2].strip()
-  m_type = vals[3].strip()
-  eid = vals[4].strip()
+  return examples
 
-  key = create_key(docid, sentid, text_contents)
-  positive_ex[key] = eid
-f.close()
-
-# negative examples: doc_id  sent_id text_contents type
-neg_f = open(neg_ex_file, 'r')
-for line in neg_f:
-  vals = line.split(delim)
-
-  docid = vals[0].strip()
-  sentid = vals[1].strip()
-  text_contents = vals[2].strip()
-  m_type = vals[3].strip()
-
-  key = create_key(docid, sentid, text_contents)
-  negative_ex.add(key)
-neg_f.close()
-
+# LOAD POSITIVE AND NEGATIVE EXAMPLES
+positive_ex = load_examples(positive_ex, pos_ex_file)
+negative_ex = load_examples(negative_ex, neg_ex_file)
 
 '''
 Process tuples from the candidate_link relation.
 '''
 for line in fileinput.input():
   '''
-  From: SELECT c.mid AS "mid", m.doc_id AS "docid", m.sentence_id AS "sentid",
-    m.text_contents AS "text_contents"
-      FROM candidate_link AS c INNER JOIN mention AS m ON c.mid = m.id
+  From: SELECT c.id AS "link_id", c.mid AS "mid", c.eid AS "eid",
+        m.text_contents AS "text_contents" FROM candidate_link AS c INNER JOIN mention AS m
+        ON (c.mid = m.mid)
 
-  To: candidate_link(id, eid, mid, is_correct)
+  To: evidence(link_id, is_correct)
   '''
   
   row = json.loads(line)
 
   mid = row["mid"]
-  docid = row["docid"]
-  sentid = row["sentid"]
   text_contents = row["text_contents"]
+  link_id = row["link_id"]
 
-  if mid is not None and docid is not None and sentid is not None and text_contents is not None:
-    key = create_key(docid, sentid, text_contents)
-
-    if key in positive_ex:
+  if mid is not None and text_contents is not None and link_id is not None:
+    # if this text exactly matches the text of some entity-mention pair that is a positive example
+    # (we are also assuming that both text_contents for that entity and that mention will be
+    # identical)
+    if text_contents in positive_ex:
       eid = positive_ex[key]
-      print json.dumps({"eid": eid, "mid": int(mid), "is_correct": True})
-    
-    elif key in negative_ex:
-      print json.dumps({"eid": None, "mid": int(mid), "is_correct": True})
+      print json.dumps({"link_id": int(link_id), "is_correct": True})
 
     else:
-      print line
+      print json.dumps({"link_id": int(link_id)})

@@ -15,7 +15,7 @@ DeepDive extracts features from the entity and mention text, and then performs p
 At a high level, the following tasks are performed:
 1. Data loading
 2. Candidate link extraction
-3. Adding positive and negative examples
+3. Adding training examples
 4. Feature extraction
 5. Inference
 6. Evaluation
@@ -37,70 +37,78 @@ The script prepare_data.sh creates and populates the necessary tables from the p
 
 ### 2. Candidate Link Extraction
 
-To begin the process of inferring whether or not a particular (entity, mention) pair should be linked, we must first arrive at a list of candidate (entity, mention) pairs that will be used as input to the feature extraction step. A good initial guess for this would be all possible (entity, mention) pairs, given all the mentions and entities in our input data. However, the number of such pairs scales poorly with data set size and this approach is impractical. Thus, to extract candidate pairs, we perform a theta join on the mention and entity tables (comparing the text_contents fields), as illustrated by this query:
+To begin the process of inferring whether or not a particular (entity, mention) pair should be linked, we must first arrive at a list of candidate (entity, mention) pairs that will be used as input to the feature extraction step. A good initial guess for this would be all possible (entity, mention) combinations, given all the mentions and entities in our input data. However, the number of such pairs scales poorly with data set size, so this approach is impractical. Therefore to extract candidate pairs we perform a theta join on the mention and entity tables (comparing the text_contents fields):
 
 ```
-SELECT * FROM mention INNER JOIN entity ON
-      (lower(mention.text_contents) = lower(entity.text_contents) OR
-      levenshtein(lower(mention.text_contents), lower(entity.text_contents)) < 3 OR
-      similarity(lower(mention.text_contents), lower(entity.text_contents)) >= 0.75) OR
-      position(lower(mention.text_contents), lower(entity.text_contents)) >= 0 OR
-      position(lower(entity.text_contents), lower(mention.text_contents))
-
+SELECT * FROM mention INNER JOIN entity ON (
+	  lower(mention.text_contents) = lower(entity.text_contents) OR
+	  levenshtein(lower(mention.text_contents), lower(entity.text_contents)) < 2 OR
+	  position(lower(mention.text_contents) in lower(entity.text_contents)) >= 0 OR
+	  position(lower(entity.text_contents) in lower(mention.text_contents)) >= 0)
 ```
 
 An entry in the *candidate_link* table is created if there exists a (mention, entity) pair such that any of the following conditions hold:
 - their lowercase text matches exactly
-- their [Levenshtein distance](http://en.wikipedia.org/wiki/Levenshtein_distance) is less than 3
-- their similarity score (explaine below) is at least 0.75
+- their [Levenshtein distance](http://en.wikipedia.org/wiki/Levenshtein_distance) is less than a threshold
 - one is a substring of the other
 
-We want to predict whether the "Barack Obama" mention should link to the "Barack Obama" entity. First, we find potential candidate matches between entities and mentions. What qualifies as a candidate match will depend on metrics that tells us how similar the entity and mention in an (e, m) pair are. For a given metric we want a binary output indicating whether the pair is a candidate match.
 
-Candidate (entity, mention) pairs are found by performing a theta join on the entity and mention tables, using the text attributes as inputs to the predicate. The example uses the following predicates, implemented in SQL:
+### 3. Adding Training Examples
+
+Once the candidate links are determined, training data is added to guide the inference. We can think of the training data as a set of (entity, mention) pairs which are known to be linked. Thus, after loading the training data from file, we can update our *candidate_link* table by inserting appropriate values into the is_correct column.
+
+
+### 4. Feature extraction
+
+Once the candidate (entity, mention) pairs are found and the training data is loaded, feature extraction is performed for each candidate (e, m) pair. Features are binary indicators of whether certain predicates are true. The output of this step is the link_features relation: link_feature(entity_id, mention_id, feature_type) where feature_type is a string name representing a particular feature (e.g. exact_string_match). Note that the feature extration predicates will not necessarily be the same as the theta join criteria for finding candidate links above; in fact, the theta join criteria is only approximate metric for extracting potential candidate links, and the feature extraction should be as detailed as possible.
+
+We use the following features to help DeepDive determine if an (entity, mention) pair should be linked:
 - Exact string match
-- Similarity score above a threshold of 0.75
-- Levenshtein edit distance below 3
+- Similarity score (described below) above a threshold
+- Levenshtein edit distance below a threshold
+- one is a substring of the other
 
-Candidate (e, m) tuples must be distinct, so after populating the candidate table a view is created to extract the unique (e, m) pairs from all candidates. 
+The [similarity score](http://www.postgresql.org/docs/9.1/static/pgtrgm.html) is computed by counting the number ot trigrams that the 2 strings share.
 
-### 3. Feature extraction
+For example, for the (e, m) pair with the text (Barack Obama, Barack Obama), all 4 features would be True and thus 4 tuples would be generated in the link_feature relation (one for each feature).
 
-Once the candidate (entity, mention) pairs are found, feature extraction is performed for each candidate (e, m) pair. Features are binary indicators of whether certain predicates are true. The output of this step is the link_features relation: link_feature(entity_id, mention_id, feature_type) where feature_type is a string name representing a particular feature (e.g. exact_string_match). 
 
- The example uses the following features:
-- Exact string match
-- Similarity score above a threshold of 0.75
-- Levenshtein edit distance below 3
+### 5. Inference
 
-Note that the features are the same as the predicates that are used to determine if a pair is a candidate link or not.
+DeepDive models entity linking as a factor graph where:
+- the variables are (entity, mention) pairs with corresponding True/False values, and
+- the factors are features extracted between candidate entity-mention pairs
 
-For example, for the (e, m) pair with the text (Barack Obama, Barack Obama), all 3 features would be True and thus 3 tuples would be generated in the link_feature relation: (e, m, 'exact_string_match'), (e, m, 'similarity_above_threshold', 'levenshtein_distance_below_3').
+The objective is to learn factor weights from training data and infer values for all unknown variables.
 
-```
-[insert extractor code from application.conf with explanation]
-```
-
-### 4. Inference
-
-DeepDive models entity linking as a factor graph where the variables are (entity, mention) pairs with corresponding True/False values, factors are features extracted between candidate entity-mention pairs, and the objective is to learn factor weights from training data and infer values for all uknown variables in the query data.
-
-As outlined in application.conf, our variables are unique (entity, mention) pairs such that a given mention only links to one entity.
-
-The factors are as follows:
-- Feature type (e.g. edit distance, etc.)
+The factors correspond to the following:
+- Feature (e.g. edit distance, etc.)
 - 1-to-many constraint between entities and mentions
 
 ```
-[code snippet]
+feature: {
+  input_query: """SELECT * FROM link_feature AS f INNER JOIN candidate_link AS c ON
+    (f.link_id = c.id)"""
+  function: "c.is_correct = Imply()"
+  weight: "?(f.feature)"
+}
+
+single_mention_to_one_entity: {
+  input_query: """SELECT * FROM 
+      (SELECT * FROM candidate_link AS l1, candidate_link AS l2 
+      WHERE l1.mid = l2.mid AND l1.eid <> l2.eid) AS t 
+      INNER JOIN candidate_link AS c ON (t.l1.eid = c.eid AND t.l1.mid = c.mid)"""
+  function: "c.is_correct = Imply()"
+  weight: 10
+}
 ```
 
-### 5. Evaluation
+### 6. Evaluation
 
 ## Inspecting Probabilities and Weights
-To evaluate DeepDive's performance on the example we can first inspect the probabilites for the variable link_feature.is_correct, and the learned weights. DeepDive creates a view called inference_result_mapped_weights in the database, which contains the weight names and the learned values sorted by absolute value.
+To evaluate DeepDive's performance on the KBP example we can first inspect the probabilites for the variable candidate_link.is_correct, and the learned weights. DeepDive creates a view called inference_result_mapped_weights in the database, which contains the weight names and the learned values sorted by absolute value.
 
-DeepDive also generates a view called link_feature.is_correct_inference, which contains our original data, augmented with the results of the inference step (probabilities).
+DeepDive also generates a view called candidate_link.is_correct_inference, which contains our original data, augmented with the results of the inference step (probabilities).
 
 
 ## Calibration Plots
@@ -112,8 +120,8 @@ For the example, we wish to use 25% of the training set for calibration. We can 
 calibration.holdout_fraction: 0.25
 ```
 
-The system will generate a single calibration file for the link_feature.is_correct variable (in target/calibration/link_feature.is_correct.tsv). The structure of this file is explained on the [calibration](calibration.html) page.
+DeepDive will produce a calibration plot in [LOCATION], which should look similar to the following:
+// TODO
 
-To generate a plot from the calibration file, simply run the script helper_scripts/calibrate.sh: it will place a calibration plot in the output/ directory.
 
 

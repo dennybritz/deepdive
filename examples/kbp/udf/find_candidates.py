@@ -9,15 +9,11 @@ import sys
 # For each tuple..
 for line in fileinput.input():
   '''
-  From: SELECT * FROM mention INNER JOIN entity ON
-          (lower(mention.text_contents) = lower(entity.text_contents) OR
-          levenshtein(lower(mention.text_contents), lower(entity.text_contents)) < 3 OR
-          similarity(lower(mention.text_contents), lower(entity.text_contents)) >= 0.75) OR
-          position(lower(mention.text_contents), lower(entity.text_contents)) >= 0 OR
-          position(lower(entity.text_contents), lower(mention.text_contents))
-  
+  From: mention theta join entity
   To: candidate_link(id, eid, mid, is_correct)
   '''
+
+  sys.stderr.write(line + '\n')
 
   row = json.loads(line)
 
