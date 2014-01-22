@@ -8,6 +8,10 @@ import ngram
 LEVENSHTEIN_DIST_THRESHOLD = 3
 SIMILARITY_THRESHOLD = 0.75
 
+'''
+Helpers that extract features between a pair of strings.
+'''
+
 def is_exact_string_match(str1, str2):
 	return str1 == str2
 
@@ -17,16 +21,19 @@ def is_levenshtein_dist_smaller_than_thr(str1, str2):
 def is_similarity_large(str1, str2):
 	return ngram.NGram.compare(str1, str2, N=3) >= SIMILARITY_THRESHOLD
 
+def is_either_substr_of_other(str1, str2):
+  return (str1.find(str2) >= 0) or (str2.find(str1) >= 0)
+
 # the list of feature-extracting functions we are currently extracting
 feature_functions = [is_exact_string_match, is_levenshtein_dist_smaller_than_thr, \
-	is_similarity_large]
+	is_similarity_large, is_either_substr_of_other]
 
 # For each tuple..
 for line in fileinput.input():
   '''
-  From: SELECT * FROM distinct_candidates_view INNER JOIN mention 
-        ON (distinct_candidates_view.mid = mention.id) INNER JOIN entity 
-        ON (distinct_candidates_view.eid = entity.id)
+  From: SELECT * FROM candidate_link INNER JOIN mention 
+        ON (candidate_link.mid = mention.id) INNER JOIN entity 
+        ON (candidate_link.eid = entity.id)
 
   To: link_feature(id, eid, mid, feature_type, is_correct)
   '''
@@ -48,3 +55,4 @@ for line in fileinput.input():
 		  		"mid": int(mid),
 		  		"feature_type": func.__name__
 		  	})
+        

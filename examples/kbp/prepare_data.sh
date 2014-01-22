@@ -32,32 +32,15 @@ psql -c """CREATE TABLE entity(
 # load the entity table
 psql -f $BASE_DIR/data/entity/entity.sql $DB_NAME
 
-# mapping between entity id given by KBP and freebase id used in entity() table
-psql -c """CREATE TABLE eid_to_fid(
-	fid text primary key,
-	eid text not null unique references entity(eid),
-	text_contents text,
-	types text);""" $DB_NAME
-
-# mapping between query id and mention id
-psql -c """CREATE TABLE qid_to_mid(
-	
-	);""" $DB_NAME
-
-psql -c """COPY eid_to_fid FROM '$BASE_DIR/data/entity/eid_to_fid.tsv'
-	DELIMITER E'\t' CSV;""" $DB_NAME
-
-# stores not necessarily unique (e, m) pairs that could be linked
-# based on our predicates
 psql -c """CREATE TABLE candidate_link(
 	id bigserial primary key,
-	eid text references entity(id),
-	mid bigserial references mention(id));""" $DB_NAME
+	eid text references entity(eid),
+	mid bigserial references mention(id),
+	is_correct boolean);""" $DB_NAME
 
-# whether or not the entity and mention are linked, and the feature type for that link
+# the feature type for the entity-mention link
 psql -c """CREATE TABLE link_feature(
 	id bigserial primary key,
-	eid text references entity(id),
+	eid text references entity(eid),
 	mid bigserial references mention(id),
-	feature_type text,
-	is_correct boolean);""" $DB_NAME
+	feature_type text);""" $DB_NAME
