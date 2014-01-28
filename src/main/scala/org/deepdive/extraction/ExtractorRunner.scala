@@ -103,7 +103,13 @@ class ExtractorRunner(dataStore: JsonExtractionDataStore) extends Actor
         log.debug(s"adding chunk of size=${chunk.size} data store.")
         val jsonData = chunk.map(Json.parse).map(_.asInstanceOf[JsObject])
         dataStore.addBatch(jsonData.iterator, task.extractor.outputRelation) 
-      }.map ( x => "OK!") pipeTo _sender
+      }.onComplete {
+        case Success(_) => _sender ! "OK!"
+        case Failure(exception) => 
+          taskSender ! Status.Failure(exception)
+          context.stop(self)
+          throw exception
+      }
       stay
     
     case Event(ProcessExecutor.ProcessExited(exitCode), Task(task, taskSender, workers)) =>
@@ -151,7 +157,7 @@ class ExtractorRunner(dataStore: JsonExtractionDataStore) extends Actor
 
   /* Queries the data store and gets all the data */
   private def sendData(task: ExtractionTask, workers: Router) {
-    log.info(s"Getting data from the data store and sending it to the workers")
+    log.info(s"Getting data from the data store and sending it to the workers. query='${task.extractor.inputQuery}'")
 
     // Figure out where to get the input from
     val extractorInput = task.extractor.inputQuery match {
@@ -163,8 +169,10 @@ class ExtractorRunner(dataStore: JsonExtractionDataStore) extends Actor
 
     // Send the input to myself, we will forward it to the workers
     extractorInput { iterator =>
-      iterator map(_.toString) grouped(task.extractor.inputBatchSize) foreach { chunk =>
-        workers.route(ProcessExecutor.Write(chunk.mkString("\n")), self)
+      if (!iterator.isEmpty) {
+        iterator map(_.toString) grouped(task.extractor.inputBatchSize) foreach { chunk =>
+          workers.route(ProcessExecutor.Write(chunk.mkString("\n")), self)
+        }
       }
     }
     
@@ -191,6 +199,9 @@ class ExtractorRunner(dataStore: JsonExtractionDataStore) extends Actor
    * Returns failure of the process fails, or returns exit value != 0.
    */
   def executeCmd(cmd: String) : Try[Int] = {
+    // Make the file executable, if necessary
+    val file = new java.io.File(cmd)
+    if (file.isFile) file.setExecutable(true, false)
     log.info(s"""Executing: "$cmd" """)
     val processLogger = ProcessLogger(line => log.info(line))
     Try(cmd!(processLogger)) match {

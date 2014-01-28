@@ -2,6 +2,9 @@ package org.deepdive.calibration
 
 import akka.actor._
 import scala.util.{Success, Failure}
+import org.apache.commons.io.FilenameUtils
+import scala.sys.process._
+import org.deepdive.profiling.QuickReport
 
 /* Compansion object for the CalibrationDataWriter */
 object CalibrationDataWriter {
@@ -28,6 +31,27 @@ class CalibrationDataWriter extends Actor with ActorLogging {
       }
       writer.close()
       log.info(s"Wrote calibration_file=${file.getCanonicalPath}")
+      
+      // Generate the calibration plot
+      val deepDiveDir = System.getProperty("user.dir")
+      val plotOutputFile = FilenameUtils.removeExtension(file.getCanonicalPath) + ".png"
+      val calibrationCmd = s"${deepDiveDir}/util/calibration.py ${file.getCanonicalPath} ${plotOutputFile}"
+      log.info(s"Running '${calibrationCmd}' to generate the calibration plot.")
+      calibrationCmd! match {
+        case 0 => 
+          context.system.eventStream.publish(QuickReport("calibration", s"calibration plot written to ${plotOutputFile}"))
+        case other =>
+          val errorStr = s"ERROR generating calibration data plot. Run '${calibrationCmd}' manually."
+          log.warning(errorStr)
+          context.system.eventStream.publish(QuickReport("calibration", errorStr))
+      }
+
+
+      
+      
+      
+
+      // Reply with success
       sender ! Success()
   } 
 
