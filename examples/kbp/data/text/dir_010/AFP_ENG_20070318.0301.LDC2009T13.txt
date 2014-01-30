@@ -1,0 +1,41 @@
+
+
+Super League table after Sunday's matches (played, won, drawn,
+lost, points for, points against, total points):
+
+
+Bradford             6 5 0 1 200 136 10
+
+
+Wakefield            6 4 0 2 159 118 8
+
+
+Leeds                6 4 0 2 138 120 8
+
+
+Hull K R             6 4 0 2 101 111 8
+
+
+Warrington           6 4 0 2 122 142 8
+
+
+St Helens            6 3 0 3 140 111 6
+
+
+Wigan                6 3 0 3 113 108 6
+
+
+Harlequins RL        6 2 1 3 104 105 5
+
+
+Hull                 6 2 1 3  84  96 5
+
+
+Catalans Dragons     6 2 1 3  99 122 5
+
+
+Salford              6 1 1 4 102 165 3
+
+
+Huddersfield         6 0 0 6  80 108 0
+

@@ -1,0 +1,46 @@
+
+
+Business software giant Oracle sued rival SAP in US federal court
+Thursday, charging the German firm with the online looting of its
+software libraries to gain a competitive advantage.
+
+
+California-based Oracle urged the US District Court in San
+Francisco to hold a jury trial in the case and immediately order
+SAP and its subsidiaries to return purloined programs and
+software fixes or "patches."
+
+
+"This case is about corporate theft on a grand scale, committed
+by the largest German software company -- a conglomerate known as
+SAP," Oracle attorney Christopher Hockett wrote in the lawsuit.
+
+
+"SAP is engaged in systematic, illegal access to, and taking
+from, Oracle's computerized customer support systems. Through
+this scheme, SAP has stolen thousands of proprietary, copyrighted
+software products and other confidential materials."
+
+
+SAP spokesman Steve Bauer told AFP that the company was declining
+to comment on the lawsuit until its attorneys had time to review
+the 44-page filing.
+
+
+The suit contends that SAP responded to Oracle's 2004 purchase of
+PeopleSoft by buying Texas-based software company TomorrowNow and
+embarking on a law-breaking conspiracy last year to steal
+Oracle's customers and technology.
+
+
+SAP bulked up its sales force to aggressively woo away Oracle
+customers, then used the clients' support accounts and passwords
+to raid Oracle's software databases, Oracle charged in court
+documents.
+
+
+Oracle said in the filing that it traced more than 10,000
+unauthorized downloads of customer "software and support
+materials" to computers in Bryan, Texas, where SAP has a US
+branch office and TomorrowNow is based.
+

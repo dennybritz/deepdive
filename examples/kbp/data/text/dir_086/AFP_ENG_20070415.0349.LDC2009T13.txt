@@ -1,0 +1,45 @@
+
+
+English Premiership table after Sunday's matches (played, won,
+drawn, lost, points for, points against, total points):
+
+
+Gloucester             21 14  2  5  496  391   66
+
+
+Leicester              20 13  1  6  516  400   66
+
+
+Saracens               21 12  2  7  532  377   63
+
+
+Wasps                  21 12  1  8  478  391   61
+
+
+Bristol                20 13  1  6  355  346   60
+
+
+London Irish           21 12  0  9  376  380   52
+
+
+Harlequins             21  9  0 12  454  438   46
+
+
+Newcastle              21  9  0 12  423  508   44
+
+
+Sale                   21  8  1 12  414  451   42
+
+
+Bath                   21  7  2 12  408  480   41
+
+
+Worcester              21  5  1 15  324  452   30
+
+
+Northampton            21  5  1 15  315  477   29
+
+
+Note: Leicester deducted 1 points for fielding an ineligible
+player
+

@@ -1,0 +1,59 @@
+
+
+German league table after Friday's match (played, won, drawn,
+lost, goals for, goals against, points):
+
+
+Schalke 04         28  17   5   6  44  27  56
+
+
+Werder Bremen      28  16   6   6  62  33  54
+
+
+VfB Stuttgart      28  15   7   6  49  33  52
+
+
+Bayern Munich      28  15   5   8  43  32  50
+
+
+Bayer Leverkusen   28  12   6  10  44  40  42
+
+
+Nuremberg          28   9  14   5  38  26  41
+
+
+Hamburg            29   7  14   8  33  31  35
+
+
+VfL Wolfsburg      28   8  11   9  30  32  35
+
+
+Energie Cottbus    28   9   8  11  32  37  35
+
+
+Hertha Berlin      28   9   8  11  38  45  35
+
+
+Hanover            28   9   8  11  34  41  35
+
+
+VfL Bochum         28   9   6  13  36  43  33
+
+
+Alemannia Aachen   28   9   6  13  43  52  33
+
+
+Dortmund           28   8   8  12  33  39  32
+
+
+Eintr. Frankfurt   28   6  13   9  35  48  31
+
+
+Arminia Bielefeld  28   7   9  12  33  37  30
+
+
+Mainz 05           28   7   9  12  26  43  30
+
+
+M'gladbach         29   6   7  16  22  36  25
+

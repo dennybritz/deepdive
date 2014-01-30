@@ -1,0 +1,65 @@
+
+
+Italian league table before Sunday's evening match (played, won,
+drawn, lost, goals for, goals against, points):
+
+
+Inter Milan        33  26   6   1  68  29  84
+
+
+Roma               34  20   9   5  66  26  69
+
+
+AC Milan           34  19  10   5  54  30  59
+
+
+Lazio              34  17  10   7  54  27  58
+
+
+Palermo            34  14  10  10  51  44  52
+
+
+Fiorentina         34  19   8   7  54  28  50
+
+
+Empoli             33  13  11   9  35  31  50
+
+
+Sampdoria          34  12   9  13  42  42  45
+
+
+Atalanta           34  10  13  11  47  46  43
+
+
+Udinese            34  11  10  13  42  46  43
+
+
+Livorno            34   8  12  14  36  51  36
+
+
+Catania            33   9   9  15  39  61  36
+
+
+Parma              34   8  11  15  34  53  35
+
+
+Reggina            34  11  12  11  46  46  34
+
+
+Siena              34   7  14  13  29  39  34
+
+
+Cagliari           34   7  13  14  29  40  34
+
+
+Torino             34   8   9  17  25  44  33
+
+
+Chievo             34   7  11  16  35  45  32
+
+
+Messina            34   5  10  19  31  58  25
+
+
+Ascoli             33   3  11  19  28  59  20
+

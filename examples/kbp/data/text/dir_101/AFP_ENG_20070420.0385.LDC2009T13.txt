@@ -1,0 +1,80 @@
+
+
+Three activist groups asked US regulators Friday to block
+Google's takeover of online ad firm DoubleClick, arguing it would
+give the Internet giant unprecedented access to data and poses
+privacy risks.
+
+
+"Google's proposed acquisition of DoubleClick will give one
+company access to more information about the Internet activities
+of consumers than any other company in the world," said the
+complaint lodged with the Federal Trade Commission.
+
+
+"Moreover, Google will operate with virtually no legal obligation
+to ensure the privacy, security, and accuracy of the personal
+data that it collects."
+
+
+The complaint was filed by the Electronic Privacy Information
+Center along with the Center for Digital Democracy and the US
+Public Interest Research Group, all of which are involved in
+online privacy issues.
+
+
+The groups said both companies have shown shortcomings in privacy
+issues that raise questions about the 3.1-billion-dollar takeover
+announced by Google earlier this week.
+
+
+The complaint said the deal poses risks for Internet users in the
+US and worldwide.
+
+
+"The acquisition of DoubleClick will permit Google to track both
+a person's Internet searches and a person's web site visits," it
+said.
+
+
+"This could impact the privacy interests of 233 million Internet
+users in North America, 314 million Internet users in Europe, and
+more than 1.1 billion Internet users around the world."
+
+
+Responding to the announcement, Google deputy general counsel
+Nicole Wong said there was "no basis for such a complaint."
+
+
+"User, advertiser and publisher trust is paramount to the success
+of our business and to the success of the acquisition," the
+Google attorney said in a statement.
+
+
+"We can't imagine taking any actions that would undermine these
+relationships or the trust people have in using our products and
+services."
+
+
+The groups said the FTC had previously cited DoubleClick for its
+use of "web bugs" to track users' progress within Web sites and
+collect information about the user and later pledged to disclose
+more information about the practice.
+
+
+They also noted that Google stores its users' search terms in a
+way that can identify them through their Internet Protocol (IP)
+address.
+
+
+Because this practice is poorly disclosed, the groups said
+"Google's representations concerning its data retention practices
+were, and are, deceptive practices."
+
+
+Without any action to halt these practices, the complaint said,
+"Google will leave Internet users vulnerable to surveillance by
+law enforcement agents and intelligence officers, both in United
+States and in other countries," and other companies "will be
+encouraged" to follow suit.
+

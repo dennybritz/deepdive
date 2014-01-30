@@ -1,0 +1,51 @@
+
+
+The European Commission will force Microsoft to hand over what
+the US software giant claims is sensitive and valuable technical
+information about its Windows operating system for almost no
+compensation, the Financial Times reported Wednesday, citing a
+confidential document.
+
+
+The world's biggest software maker is required to license the
+technical information to competing groups under the terms of the
+European Commission's antitrust ruling issued three years ago,
+the newspaper said.
+
+
+The Commission last month accused Microsoft of demanding
+excessive royalties from licences. Microsoft wants as much as
+5.95 percent of companies' server revenues to license the
+information.
+
+
+But the FT said the confidential statement of objections from the
+Commission "makes clear that Microsoft will at best be allowed to
+levy a tiny fraction of the royalties it is demanding."
+
+
+"Brussels hopes the order will allow rivals to design server
+software that runs more smoothly with Windows," the newspaper
+said.
+
+
+The FT said three Microsoft rivals -- IBM, Sun and Oracle -- have
+reviewed the group's pricing scheme and concluded its price
+demands are excessive.
+
+
+"The prices charged by Microsoft are prohibitive and would not
+allow them to develop products that would be viable from a
+business perspective," it quoted the Commission charge sheet as
+saying.
+
+
+A Microsoft spokesman told the FT: "Microsoft will respond to the
+latest statement of objections in full by April 23. We believe we
+are in compliance with the March 2004 decision and that the terms
+on which we have made the protocols available are reasonable and
+non-discriminatory."
+
+
+The Commission declined to comment, the newspaper said.
+

@@ -1,0 +1,62 @@
+
+
+Want to know whether your Internet social network will survive or
+break up?
+
+
+Try mathematics.
+
+
+An algorithm developed by Tamas Vicsek of Budapest's Eotvos
+University and colleagues aims at pinning down some of the
+mechanisms for social interaction in a complex, fast-moving
+world.
+
+
+They trawled over two sets of data to explore how people link up.
+One was a collaborative network of more than 30,000 researchers
+connected to an archive at New York's Cornell University; the
+other was the year-long record of communications patterns of four
+million mobile phone users.
+
+
+Put together, these figures provided an intriguing picture of
+relationship dynamics.
+
+
+The team found that small groups endure only if they have an
+unchanged core of members -- in other words, a clique.
+
+
+"A typically small and stationary community undergoes minor
+changes, but lives for a long time," they report in Thursday's
+issue of Nature, the weekly British science journal.
+
+
+Among large groups, though, the opposite holds true -- a large
+community breaks up quickly if it is stationary, but endures if
+it opens itself up to new members.
+
+
+One example of this successful, loose affiliation is a school or
+a company.
+
+
+In a few years, most members or employees may change, yet the
+entity will be detectable as a "distinct community" at any time
+during its existence, says the study.
+
+
+Vicsek's group also developed a complex formula based on a group
+member's contacts with others, to predict whether that individual
+would stay with the group or leave it.
+
+
+The figures bear out, mathematically, what we know instinctively.
+
+
+Someone who shows a heightened interest in an outside group is
+probably about to leave his present one -- and the more contact
+the present group has with him, the likelier he is to be
+committed to staying in it.
+

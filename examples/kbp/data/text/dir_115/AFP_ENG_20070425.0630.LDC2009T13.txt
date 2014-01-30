@@ -1,0 +1,36 @@
+
+
+World Cup leading wicket-takers after the conclusion of the semi-
+finals on Wednesday (bowler, country, matches, runs, wickets,
+best bowling, average):
+
+
+Glenn McGrath         (AUS) 10  322  25  3/14 12.88
+
+
+Muttiah Muralitharan  (SRI)  9  307  23  4/19 13.34
+
+
+Shaun Tait            (AUS) 10  403  20  3/32 20.15
+
+
+Brad Hogg             (AUS) 10  289  19  4/27 15.21
+
+
+Lasith Malinga        (SRI)  7  235  16  4/54 14.68
+
+
+Daniel Vettori        (NZL) 10  447  16  4/23 27.93
+
+
+Nathan Bracken        (AUS)  9  219  15  4/19 14.60
+
+
+Andrew Hall           (RSA)  9  292  14  5/18 20.85
+
+
+Andrew Flintoff       (ENG)  8  298  14  4/43 21.28
+
+
+Daren Powell          (WIS)  9  385  14  3/38 27.50
+

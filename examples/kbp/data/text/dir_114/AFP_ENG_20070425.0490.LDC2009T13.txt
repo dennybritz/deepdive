@@ -1,0 +1,53 @@
+
+
+There is the nagging question of whether life exists other than
+on Earth.
+
+
+The enduring mystery of who made us -- and why.
+
+
+And then there is this: Why does the foam on a pint of lager
+quickly disappear but the head on a pint of Guinness linger?
+
+
+Answers to questions 1 and 2 are still being sought, but the
+Great Beer Riddle, at least, may soon be solved.
+
+
+Writing in the prestigious British science journal Nature, an
+elite scientific duo say they have devised an equation to
+describe beer froth.
+
+
+The breakthrough will not only settle the vexatious lager vs.
+stout debate, it will also help the quest to pour a perfect pint
+every time.
+
+
+Beer foam is a microstructure with complex interfaces. In other
+words: a cellular structure comprising networks of gas-filled
+bubbles separated by liquid.
+
+
+The walls of these bubbles move as a result of surface tension --
+and the speed at which they move is related to the curvature of
+the bubbles. As a result of this movement, the bubbles merge and
+the structure "coarsens," meaning that the foam settles and
+eventually disappears.
+
+
+Three-dimensional equations to calculate the movement have been
+made by Robert MacPherson, a mathematician at the Institute for
+Advanced Study in Princeton, New Jersey, and David Srolovitz, a
+physicist at Yeshiva University, New York.
+
+
+They build on work by a computer pioneer, John von Neumann, who
+in 1952 devised an equation in two dimensions.
+
+
+The mathematics of beer-bubble behaviour are similar to the
+granular structure in metals and ceramics, so the equation also
+has an outlet in metallurgy and manufacturing as well as in pubs.
+

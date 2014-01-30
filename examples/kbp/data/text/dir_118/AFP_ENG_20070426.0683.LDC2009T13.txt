@@ -1,0 +1,39 @@
+
+
+Leading World Cup run-makers ahead of the World Cup final between
+Australia and Sri Lanka at Kensington Oval on Saturday (player,
+country, matches, runs, high score, average, 100s, 50s)
+
+
+Matthew Hayden       (AUS) 10 621 158   77.62  3 1
+
+
+Mahela Jayawardene   (SRI) 10 529 115*  66.12  1 4
+
+
+Ricky Ponting        (AUS) 10 502 113   71.71  1 4
+
+
+Scott Styris         (NZL) 10 499 111*  83.16  1 4
+
+
+Jacques Kallis       (RSA) 10 485 128*  80.83  1 3
+
+
+Kevin Pietersen      (ENG)  9 444 104   55.50  2 3
+
+
+Graeme Smith         (RSA) 10 443  91   49.22  0 5
+
+
+Michael Clarke       (AUS) 10 428  93*  85.60  0 4
+
+
+Sanath Jayasuriya    (SRI) 10 404 115   44.88  2 1
+
+
+Ramnaresh Sarwan     (WIS)  9 375  92   46.87  0 2
+
+
+* - not out
+

@@ -1,0 +1,42 @@
+
+
+Proteins, the complex molecules of life, have been sequenced into
+classical music, researchers in the US reported on Thursday.
+
+
+Rie Takahashi and Jeffrey Miller of the University of California,
+Los Angeles, used parts of amino acids -- the building blocks of
+proteins -- to devise a 20-note range spanning two octaves.
+
+
+Their inspiration: thymidylate synthase A, or ThyA, a protein
+that in a flawed form plays a part in types of cancer.
+
+
+The work builds on previous innovation, using the code for DNA.
+But DNA has only four potential "notes" -- the compounds that
+make up the rungs on the double- helix ladder -- and this is
+musically limiting.
+
+
+Takahashi and Miller believe their brainchild will be useful for
+getting young people interested in genomic biology.
+
+
+They have also set up a browser that allows anyone to send in a
+sequence coding for a protein that is then converted into music
+and returned to the inquirer as a "midi" file, or music that is
+transcribed into a standard software format.
+
+
+Proteins can be qualified as the stuff of life, not just
+comprising almost all of the body's tissues but also performing
+myriad roles as signallers, repairers and destroyers, too.
+
+
++ Examples of protein compositions can heard on these links:
+(http://genomebiology.com/imedia/8376589061249763/supp1.mp3);
+(http://genomebiology.com/imedia/2716159601249764/supp2.mp3);
+(http://genomebiology.com/imedia/6707441912497660/supp3.mid); and
+(http://genomebiology.com/imedia/2094561028124976/supp4.mid).
+

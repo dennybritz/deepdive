@@ -1,0 +1,97 @@
+
+
+Detailed thermal imaging of Mars has shown that ice on the Red
+Planet is patchy and lurks at varied depths in its soil, a
+finding that will help finetune the search for water there.
+
+
+Evidence from orbiting probes and US rovers says that millions of
+years ago Mars was covered with water -- and there could be
+substantial quantities of the stuff lurking as ice, just beneath
+the surface.
+
+
+The big questions, though, are exactly where, and at what depths.
+
+
+A gamma-ray spectrometer aboard the orbiting Mars Odyssey was
+first to indicate that water ice could be lying at relatively
+shallow depths.
+
+
+But its pictures are too wide-scale -- 500 kilometers (300 miles)
+wide at least -- to locate the ice more precisely or to provide
+practical tips for shaping future explorations.
+
+
+But a tweaked-up, heat-sensing camera aboard the same spacecraft
+may have the answer, according to a paper reported on Thursday in
+Nature, the British science journal.
+
+
+With its infrared eyes, the gadget, called THEMIS, is able to
+spot details just 100 metres (yards) across.
+
+
+It has now mapped several Martian sites, each at a latitude of 60
+to 70 degrees, where surface ice has already been known to exist.
+
+
+The nature of the soil has a big impact on where the ice can be
+found, says investigator Joshua Bandfield of Arizona State
+University.
+
+
+In dusty areas, ice can survive at a couple of inches (several
+centimetres) beneath the surface, apparently insulated by the
+grains.
+
+
+But in areas littered with rocks, stable ice -- ice unaffected by
+local seasons -- can be found at much greater depths, sometimes
+"many feet (tens of centimetres) below the surface," says
+Bandfield.
+
+
+The apparent reason: rocks warmed by the Sun pump a lot of heat
+into the ground, thwarting the formation of ice at layers that
+are very close to the surface.
+
+
+"These two surface materials -- rock and dust -- vary widely
+across the ground, giving underground ice a patchy distribution,"
+Bandfield explains.
+
+
+So far, the evidence for water on Mars is inferred, coming from
+pictures and other data from US and European orbiters and from
+two American rovers, Spirit and Opportunity, that are on the
+ground.
+
+
+But in August, NASA is due to launch a mission that, the agency
+hopes, will provide the first direct evidence.
+
+
+It is due to send a non-roving lander, called Phoenix, that will
+be dropped to a high-latitude site on Mars' northern hemisphere.
+
+
+There, the scout will scrape away some of the soil, hopefully
+exposing some ice, which an onboard lab will then analyse to see
+if it has the potential for harbouring bacterial life.
+
+
+Choosing the most promising spot will determine whether this
+mission succeeds or fails.
+
+
+"The take-home message for the Phoenix lander is that the THEMIS
+results show a lot of patchiness in the ground ice, and this
+should continue down to smaller and smaller scales," Bandfield
+says.
+
+
+Phoenix, he warns, "may find ground ice is shallower and much
+easier to reach in some spots than in others."
+

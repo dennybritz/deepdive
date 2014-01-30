@@ -1,0 +1,67 @@
+
+
+The body responsible for the global coordination of the
+Internet's system of unique identifiers on Friday rejected plans
+to establish a new ".XXX" domain for racy or sexually explicit
+websites.
+
+
+The Internet Corporation for Assigned Names and Numbers (ICANN)
+said an ".XXX domain" would not resolve the issue of how to
+protect "vulnerable members of the community".
+
+
+ICANN would also be obligated "to acquire a responsibility
+related to content and conduct," it said in a statement after a
+board meeting.
+
+
+"This decision was the result of very careful scrutiny and
+consideration of all the arguments," ICANN Chairman Vint Cerf
+said, adding: "That consideration has led a majority of the Board
+to believe that the proposal should be rejected."
+
+
+ICANN is an internationally organized, public benefit non-profit
+body responsible for the global coordination of the Internet's
+system of unique identifiers. These include domain names (like
+.org, .museum and country codes like .UK), as well as the
+addresses used in a variety of Internet protocols.
+
+
+Computers use these identifiers to reach each other over the
+Internet.
+
+
+Two US senators last year proposed US legislation that would
+establish the new ".XXX" domain.
+
+
+The bill proposed by senators Mark Pryor and Max Baucus, both
+Democrats, called upon the US Department of Commerce to exclude
+sexually charged content from established website domain names
+such as .gov, .com, .org, .net, and .edu.
+
+
+Baucus said that a .XXX domain would help parents use filtering
+software to keep children from accessing pornographic sites, and
+would help prevent hapless Internet users from inadvertently
+stumbling onto sexually-explicit websites that they would prefer
+not to see.
+
+
+ICANN was created in 1998 and is based in California.
+
+
+According to the corporation's website more than 830 people from
+81 countries gathered in Lisbon for what chairman Cerf called
+"one of ICANN's busiest and issue-intensive meetings ... which
+helped ICANN make substantial progress on numerous fronts"
+including the launch of a new website "with better navigation and
+new features to increase ICANN's transparency and
+accountability."
+
+
+The 29th ICANN public meeting will held June 25-29 in San Juan,
+Puerto Rico.
+

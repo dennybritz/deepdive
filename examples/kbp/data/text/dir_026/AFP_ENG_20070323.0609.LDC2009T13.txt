@@ -1,0 +1,48 @@
+
+
+French rugby union championship standings after Friday's match
+(played, won, drawn, lost, points for, points against, bonus
+points, total points):
+
+
+Stade Francais         19 14  0  5 542 330  9  65
+
+
+Clermont               19 13  0  6 522 318  7  59
+
+
+Biarritz               20 12  0  8 417 285  8  56
+
+
+Perpignan              19 12  0  7 351 299  7  55
+
+
+Toulouse               19 11  2  6 400 330  5  53
+
+
+Bourgoin               19  9  0 10 401 337  9  45
+
+
+Montauban              19  8  1 10 370 361  8  42
+
+
+Agen                   19  9  0 10 305 343  5  41
+
+
+Albi                   20  9  1 10 246 366  2  40
+
+
+Castres                19  7  1 11 410 411  9  39
+
+
+Narbonne               19  7  0 12 419 564  6  34
+
+
+Montpellier            19  6  1 12 314 466  7  33
+
+
+Brive                  19  7  0 12 268 391  4  32
+
+
+Bayonne                19  7  0 12 322 486  3  31
+

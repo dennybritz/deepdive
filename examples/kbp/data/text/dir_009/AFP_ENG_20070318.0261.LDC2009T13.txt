@@ -1,0 +1,59 @@
+
+
+Netherlands league table after Sunday's matches (played, won,
+drawn, lost, goals for, goals against, points):
+
+
+PSV Eindhoven      29  21   4   4  65  20  67
+
+
+Ajax               29  19   5   5  70  31  62
+
+
+AZ 67 Alkmaar      29  17   9   3  71  26  60
+
+
+FC Twente          29  17   7   5  60  32  58
+
+
+Feyenoord          29  14   7   8  52  52  49
+
+
+SC Heerenveen      29  14   5  10  48  35  47
+
+
+Roda JC            29  11   9   9  34  35  42
+
+
+NAC Breda          29  12   6  11  40  43  42
+
+
+FC Utrecht         29  11   7  11  34  39  40
+
+
+FC Groningen       29  11   6  12  42  50  39
+
+
+NEC Nijmegen       29  10   7  12  29  35  37
+
+
+Vitesse Arnhem     29   9   7  13  45  47  34
+
+
+Sparta             29   9   5  15  34  55  32
+
+
+Willem II          29   7   6  16  28  55  27
+
+
+Heracles           29   5  10  14  24  50  25
+
+
+Excelsior          29   6   6  17  35  54  24
+
+
+RKC Waalwijk       29   5   7  17  27  54  22
+
+
+ADO Den Haag       28   3   7  19  35  60  16
+

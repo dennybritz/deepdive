@@ -1,0 +1,109 @@
+
+
+Hackers are selling fake US-based credit cards on the Internet
+for as little as one dollar, and a full set of data for a fake
+identity for as low as 14 dollars, a Web security firm said
+Monday.
+
+
+A semiannual report by California-based Symantec found threats in
+cyberspace are growing, particularly in data theft and "targeted
+malicious code for the purpose of stealing confidential
+information that can be used for financial gain."
+
+
+"Cyber criminals continue to refine their attack methods in an
+attempt to remain undetected and to create global, cooperative
+networks to support the ongoing growth of criminal activity," the
+Internet Security Threat Report noted.
+
+
+Symantec said it tracked for the first time the trade of stolen
+confidential information and captured data being sold on
+"underground" servers.
+
+
+These are networks used by hackers and shadowy criminal
+organizations to sell stolen information, including social
+security numbers, credit cards, personal identification numbers
+(PINs), and e-mail address lists.
+
+
+Some 51 percent of all these servers in the world were located in
+the United States. Sweden ranked second, accounting for 15
+percent of the worldwide total, and Canada ranked third,
+accounting for seven percent.
+
+
+On the networks, US-based credit cards with a verification number
+were available for between one and six dollars while an identity,
+including a US bank account, credit card, date of birth and
+government-issued identification number, was available for
+between 14 and 18 dollars, Symantec said.
+
+
+Symantec estimated that 4,943 bank cards were sold over these
+networks in the last six months of 2006, mostly from US-based
+banks.
+
+
+Also being sold on the networks: Online bank accounts with a
+9,900-dollar balance for 300 dollars; PayPal accounts for 10 to
+500 dollars and a list of 2,900 e-mail addresses for three
+dollars.
+
+
+Much of the credit card and bank data is stolen by infecting
+computers to allow the hackers to gain access to passwords and
+other sensitive information. This is done through e-mails, often
+spam, that have viruses or other malicious code.
+
+
+Another method is to trick consumers into giving up user
+information by fake e-mails purportedly from banks and other
+organizations, a technique known as "phishing."
+
+
+In other cases, hackers can sometimes break into computer
+networks of governments or businesses to steal key data.
+
+
+"Most breaches of this type are avoidable," Symantec said, if
+companies encrypt sensitive data.
+
+
+"As cyber criminals become increasingly malicious, they continue
+to evolve their attack methods to become more complex and
+sophisticated in order to prevent detection," said Arthur Wong,
+senior vice president at Symantec.
+
+
+"End users, whether consumers or enterprises, need to ensure
+proper security measures to prevent an attacker from gaining
+access to their confidential information, causing financial loss,
+harming valuable customers, or damaging their own reputation."
+
+
+Spam, a key source for e-mail computer infections, made up 59
+percent of all e-mail traffic monitored by Symantec over the six-
+month period, up from 54 percent in the first half of 2006.
+
+
+By sending out spam and infecting computers, hackers can create
+"bot networks" of "zombie" computers that can be used for
+additional attacks.
+
+
+Symantec said it observed an average of 63,912 active bot-
+infected computers per day over the period, up 11 percent over
+the previous six months.
+
+
+China had the highest number of bot-infected computers,
+accounting for 26 percent of the total, with 14 percent in the
+United States. Brazil was third with nine percent.
+
+
+But the United States reported 31 percent of worldwide "malicious
+activity," well ahead of China with 10 percent.
+

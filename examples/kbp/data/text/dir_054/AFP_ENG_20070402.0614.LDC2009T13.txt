@@ -1,0 +1,53 @@
+
+
+Portuguese league standings after Monday's match (played, won,
+drawn, goals for, against, points):
+
+
+FC Porto              23  17   2   4  47  13  53
+
+
+Benfica               23  16   4   3  44  16  52
+
+
+Sporting Lisbon       23  14   7   2  35  13  49
+
+
+Sporting Braga        23  11   5   7  29  27  38
+
+
+Belenenses            23  11   4   8  26  20  37
+
+
+Nacional Madeira      23   9   5   9  32  28  32
+
+
+Pacos Ferreira        23   8   8   7  25  31  32
+
+
+Uniao Leiria          23   8   7   8  17  21  31
+
+
+Maritimo              23   8   5  10  27  30  29
+
+
+Naval                 23   7   8   8  22  24  29
+
+
+Boavista              23   6  10   7  26  26  28
+
+
+Estrela Amadora       23   6   6  11  15  27  24
+
+
+Academica             23   5   6  12  23  36  21
+
+
+V. Setubal            23   4   7  12  15  31  19
+
+
+Beira Mar             23   2   9  12  21  45  15
+
+
+Aves                  23   2   7  14  14  30  13
+

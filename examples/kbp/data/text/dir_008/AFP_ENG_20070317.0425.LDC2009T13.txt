@@ -1,0 +1,65 @@
+
+
+French league table after Saturday's matches (played, won, drawn,
+lost, goals for, goals against, points):
+
+
+Lyon               29  20   5   4  54  23  65
+
+
+Lens               28  13  10   5  42  30  49
+
+
+Bordeaux           29  13   5  11  31  30  44
+
+
+Lille              29  11  10   8  36  27  43
+
+
+Sochaux            29  11  10   8  35  34  43
+
+
+Toulouse           29  12   7  10  33  33  43
+
+
+St Etienne         29  12   6  11  46  39  42
+
+
+Marseille          29  12   6  11  35  29  42
+
+
+Le Mans            29  10  11   8  35  33  41
+
+
+Monaco             29  10   8  11  34  30  38
+
+
+Auxerre            28   9  11   8  31  33  38
+
+
+Rennes             28   9  10   9  24  24  37
+
+
+Lorient            29   9  10  10  25  29  37
+
+
+Nancy              29   9   9  11  26  34  36
+
+
+Valenciennes       29   9   6  14  29  40  33
+
+
+Nice               29   7  10  12  25  30  31
+
+
+Troyes             29   7   9  13  29  44  30
+
+
+Nantes             29   6  11  12  25  36  29
+
+
+Paris SG           28   6  10  12  27  35  28
+
+
+Sedan              29   5  12  12  37  46  27
+

@@ -1,0 +1,51 @@
+
+
+A US judge on Friday blocked Vonage from signing up new customers
+in the wake of a jury verdict that the Internet telephony company
+had violated patents of rival Verizon.
+
+
+US District Court Judge Claude Hilton's ruling allowed Vonage to
+keep its approximately 2.2 million current customers while it
+appealed the verdict.
+
+
+"Judge Hilton exercised the court's equitable discretion to craft
+a middle path that allows Vonage to continue serving its existing
+customers while protecting Verizon's patents from increased
+infringement during the appeal process," Verizon said in a
+written statement.
+
+
+"We expect Judge Hilton to be affirmed on appeal."
+
+
+Verizon filed suit against the New Jersey-based, cut-rate Voice
+over Internet Protocol (VoIP) company in US District Court for
+the Virginia Eastern District in 2006.
+
+
+Verizon, which has its headquarters in New York City, accused
+Vonage of infringing on five of its patents involving online
+telephony.
+
+
+A two-week trial ended on March 8 with jurors finding that Vonage
+had infringed on three Verizon's patents.
+
+
+The jury ordered the start-up to pay Verizon 58 million dollars
+for its transgressions and to pay Verizon royalties amounting to
+5.5 percent of revenues if it continues using the technology.
+
+
+Vonage depicted the verdict as a victory, emphasizing that
+Verizon had succeeded with only three of its claims and that the
+damages awarded were much less than the 197 million dollars
+Verizon asked for in court.
+
+
+Vonage said after the verdict that it expected to get the
+findings against it reversed on appeal and that it intended to
+ask a federal appeals court to stay any injunction.
+

@@ -1,0 +1,76 @@
+
+
+Discount shoppers the world over were put on guard Friday after
+the retail group TJX disclosed that some 45.6 million credit and
+debit card numbers were stolen by hackers in 2005 and 2006.
+
+
+The company, which operates TJ Maxx and other stores in the
+United States and TK Maxx in Britain and Ireland, also said
+Thursday some 455,000 customers may have had personal information
+compromised in the massive data breach.
+
+
+The retailer made the disclosure in a filing with the Securities
+and Exchange Commission, expanding on its announcement earlier
+this year.
+
+
+It said a majority of the data may not be useful because it was
+encrypted, had incomplete credit card numbers or were from cards
+that were expired at the time of the breach between July 2005 and
+December 2006.
+
+
+But Avivah Litan, of the consulting firm Gartner Inc told the
+Boston Globe: "It's the biggest card heist over. It's done
+considerable damage."
+
+
+The company said it learned on December 18, 2006 of "suspicious
+software" on its computer systems and later discovered "that
+there was strong reason to believe that our computer systems had
+been intruded upon."
+
+
+The company subsequently notified law enforcement in the United
+States, Canada and Britain, and later determined that the
+intrusions may have dated back as far as July 2005.
+
+
+Several lawsuits are pending relating to what some have described
+as the biggest financial data breach in history.
+
+
+Until now, the biggest data breach was the 2005 theft of 40
+million credit cards numbers from the servers of the payment
+processor CardSystems Solutions.
+
+
+According to US media, last week police arrested six people who
+had used credit card numbers stolen from TJX to rack up purchases
+of one million dollars.
+
+
+Data theft has increased in recent months along with an increase
+in computer use. According to the technology security company
+Symantec, Internet-based theft of credit card numbers and
+passcodes jumped in 2006.
+
+
+In the second half of the year, Symantec found some six million
+computers were infected with suspect software. The company said
+computer use skyrocketed 29 percent over the second half of 2005.
+
+
+Symantec said the industry has developed into an underground
+cyber economy, in which hackers and organized crime groups trade
+in stolen data.
+
+
+A stolen credit card number, along with its security code, sells
+for between one and six dollars, the company said. More complete
+personal information, including a bank account number, date of
+birth and social security number sells for between 14 and 18
+dollars, according to Symantec.
+

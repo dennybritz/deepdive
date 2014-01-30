@@ -1,0 +1,77 @@
+
+
+Sony announced on Thursday that its PlayStation 3 video game
+consoles will be enhanced to join a supercomputing network
+researching causes of cancer, Alzheimer's and other incurable
+diseases.
+
+
+The Japanese electronics titan said a software update that will
+be available by the end of March will enable users to devote
+their consoles' idle time to a Stanford University quest for
+diseases caused by "misfolded" proteins.
+
+
+Such diseases include Parkinson's, mad cow, Alzheimer's,
+Huntington's and some forms of cancer, according to Stanford
+associate professor Vijay Pande, leader of the "Folding@home"
+project.
+
+
+PlayStation 3 console software will let users click on a
+"Folding@home" icon on their television screens to have their
+machines devote their computing power to medical research
+whenever games aren't being played.
+
+
+The program harnesses idle time of Internet-linked home computers
+to use the combined power to perform in months protein-folding
+simulations that would take a single machine decades to complete.
+
+
+Processors in PlayStation 3 computers are approximately 10 times
+faster than chips in typical personal computers so adding the
+consoles to the "folding at home" network should boost simulation
+speeds, Sony said.
+
+
+"Millions of users have experienced the power of PS3
+entertainment; now they can utilize that exceptional computing
+power to help fight diseases," said Sony Computer Entertainment
+chief technical officer Masayuki Chatani.
+
+
+"PCs have been the only option for scientists, but now, they have
+a new, more powerful tool -- PS3."
+
+
+Sony said it planned to make the gaming consoles compatible with
+other medical, social, or environmental distributed-computing
+research efforts.
+
+
+"We're thrilled," Pande said at a press conference with Sony
+executives at the Stanford campus in Palo Alto, California.
+
+
+"With PS3 now part of our network, we will be able to address
+questions previously considered impossible to tackle
+computationally, with the goal of finding cures to some of the
+world's most life-threatening diseases."
+
+
+In perhaps the most well known distributed-computing project,
+researchers at the Berkeley campus of the University of
+California launched SETI@home in 1999 to help search for messages
+beamed from space.
+
+
+More than five million personal computers in countries around the
+world are combined in a network that uses excess computing power
+to study radio telescope signals gathered by the Search for
+Extraterrestrial Intelligence (SETI).
+
+
+Sony said it will make PlayStation 3 compatible with a variety of
+medical, social and environmental research efforts.
+

@@ -1,0 +1,37 @@
+
+
+Biotechnologists have engineered brewer's yeast so that it glows
+green in response to an ingredient found in land mines, according
+to a study published online on Monday.
+
+
+Saccharomyces cerevisiae, a yeast used in baking as well as
+brewing, was engineered so that it had an "olfactory pathway"
+that responded to airborne molecules of DNT.
+
+
+DNT -- chemical name 2,4-dinitrotoluene -- is a residue from the
+making of the explosive TNT. Dogs trained to sniff for explosives
+are believed in fact to be trained to detect DNT.
+
+
+A gene found in rats was spliced into the yeast's genome so that
+the surface of its cells reacted in response to DNT, the paper
+says.
+
+
+To get a visual cue as to whether this "nose" had detected DNT,
+the team also added a gene to turn the yeast a fluorescent green
+when contact was made.
+
+
+The authors, led by Danny Dhanasekaran of Temple University
+School of Medicine in Philadelphia, believe they have found a
+useful, if so far experimental, addition to "biosensors" --
+gadgets that use organisms to detect biological or chemical
+weapons of mass destruction.
+
+
+The research is published by Nature Chemical Biology, a journal
+of the London- based Nature group.
+

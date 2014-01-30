@@ -1,0 +1,45 @@
+
+
+English Premiership table after Friday's match (played, won,
+drawn, lost, points for, points against, total points):
+
+
+Leicester              20 13  1  6  516  400   66
+
+
+Gloucester             19 14  1  4  463  351   63
+
+
+Saracens               19 11  2  6  473  331   57
+
+
+Bristol                19 12  1  6  333  329   56
+
+
+Wasps                  19 10  1  8  416  336   52
+
+
+London Irish           19 11  0  8  333  330   47
+
+
+Harlequins             19  8  0 11  401  388   41
+
+
+Sale                   20  7  1 12  389  428   38
+
+
+Bath                   19  7  1 11  364  434   38
+
+
+Newcastle              19  7  0 12  388  489   36
+
+
+Worcester              19  5  1 13  291  404   29
+
+
+Northampton            19  5  1 13  279  426   28
+
+
+Note: Leicester deducted 1 point for fielding an ineligible
+player
+

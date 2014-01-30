@@ -1,0 +1,65 @@
+
+
+French league table after Wednesday's matches (played, won,
+drawn, lost, goals for, goals against, points):
+
+
+Lyon               32  21   7   4  55  23  70
+
+
+Toulouse           32  15   7  10  38  33  52
+
+
+Lens               32  13  11   8  43  34  50
+
+
+Bordeaux           32  14   7  11  34  30  49
+
+
+Sochaux            32  12  11   9  37  37  47
+
+
+Marseille          32  13   7  12  40  32  46
+
+
+Lille              32  12  10  10  39  33  46
+
+
+Saint-Etienne      32  13   6  13  49  43  45
+
+
+Rennes             32  11  12   9  26  24  45
+
+
+Lorient            32  11  11  10  28  30  44
+
+
+Le Mans            32  10  13   9  38  37  43
+
+
+Auxerre            32  10  13   9  34  37  43
+
+
+Monaco             32  10  11  11  35  31  41
+
+
+Valenciennes       32  10   8  14  31  40  38
+
+
+Nancy              32   9  10  13  26  38  37
+
+
+Nice               32   8  12  12  29  33  36
+
+
+Paris SG           32   8  11  13  31  38  35
+
+
+Troyes             32   7  11  14  29  45  32
+
+
+Sedan              32   6  12  14  38  49  30
+
+
+Nantes             32   6  12  14  26  39  30
+

@@ -1,0 +1,224 @@
+
+
+When 17-year-old Garyl Tan Jia Luo piggybacked on his neighbour's
+unsecured wireless Internet network to chat online, he could not
+have imagined that in doing so he would make Asian legal history.
+
+
+Information technology (IT) experts and lawyers say Tan was the
+first in Singapore, and possibly Asia, to be sentenced in court
+for "wireless mooching," or piggybacking on an unsecured wireless
+network to surf the Internet.
+
+
+A judge in the city-state's district court sentenced him to 18
+months' probation in January.
+
+
+Tech-savvy Singapore, one of Asia's most wired nations, appears
+to be the regional pioneer in clamping down on wireless network
+freeloaders, IT experts and lawyers said.
+
+
+They said they were not aware of similar prosecutions in the
+Asia-Pacific region, and that only a handful of cases had emerged
+over the past three years in North America.
+
+
+"There is no similar criminal case in Hong Kong. And we believe
+Singapore is quite a pioneer in this area," said Howard Lau,
+president of Hong Kong's Professional Information Security
+Association, an industry grouping.
+
+
+The Singapore case may set a precedent in Asia and "open the
+floodgates for similar prosecutions," said Aloysious Cheang,
+president of the Special Interest Group in Security and
+Information Integrity, a Singapore information and communications
+security association.
+
+
+Moochers make up an estimated five to 10 percent of the region's
+wireless traffic at any time, said Bernie Trudel, principal
+security consultant at network firm Cisco Systems Asia Pacific,
+which supplies networking equipment through its Linksys division.
+
+
+Residential wireless networks are more vulnerable to piggybackers
+than corporate networks because only about 40 to 50 percent of
+home networks are secured, compared with 80 to 90 percent for
+corporate users, Trudel said.
+
+
+Bryan Tan, a lawyer specialising in IT law at Keystone Law
+Corporation in Singapore, said one of the few cases similar to
+Garyl Tan's occurred in Florida.
+
+
+According to a report in the St Petersburg Times newspaper, a 41
+-year-old man was charged in April 2005 with unauthorised access
+of a computer network. He was arrested for accessing the Internet
+using a homeowner's wireless network on a laptop while parked
+outside.
+
+
+In Singapore, Garyl Tan was charged under Singapore's Computer
+Misuse Act for securing access without authority to a computer
+for the purpose of obtaining computer services.
+
+
+Tan got probation, but conviction could have brought him up to
+three years' imprisonment, a 10,000 dollar (6,490 US) fine, or
+both.
+
+
+Although wireless mooching is not unusual across Asia,
+prosecutions are uncommon for several reasons, said lawyers who
+specialise in information technology law. They cited the low
+priority placed on mooching offences, the difficulty in tracking
+offenders and an absence of laws against piggybacking.
+
+
+"I would not say that the act of piggybacking is unusual. It is
+the prosecution of it that is unusual ... taking action against
+an individual who is piggybacking without the intention to cause
+any harm is not a pressing criminal matter for most countries,"
+said Cyril Chua, partner at law firm Alban Tay Mahtani and de
+Silva in Singapore.
+
+
+Countries may place a lower priority on wireless mooching than on
+hacking and more severe technology-related crimes, Chua added.
+Unlike Singapore, some may not even have clear laws prohibiting
+wireless piggybacking, he said.
+
+
+"While there are laws in Hong Kong and South Korea relating to
+unauthorised access to computer systems like hacking, I couldn't
+find any laws prohibiting Wi-Fi piggybacking," he said.
+
+
+Under Hong Kong's Telecommunications Ordinance, any person who
+knowingly causes a computer to obtain unauthorised access to any
+programme or data held in a computer, is liable on conviction to
+a fine of 20,000 Hong Kong dollars (2,560 US).
+
+
+Chua said the Hong Kong provision is essentially against hacking
+rather than wireless mooching, which involves unauthorised access
+to a network.
+
+
+Even in countries where wireless piggybacking is outlawed,
+enforcement is difficult, said Tan, the Singapore lawyer.
+
+
+"And the reason for that is that the sheer number of Wi-Fi
+networks used at homes is so large and typically are not
+monitored by experts. Therefore, it would be difficult to
+identify whether unauthorised access has taken place," he said.
+
+
+Home users who pay for unlimited Internet access would also not
+be bothered if others tap into their bandwidth, he said.
+
+
+"So we typically see prosecution when related to other crimes
+which cause harm," he said.
+
+
+Less than a month after Tan's sentencing, a 21-year-old man was
+in court for another Singapore case related to wireless mooching.
+But Lin Zhenghuang was sentenced to three months' imprisonment
+and fined 4,000 dollars (2,614 US). He had posted an online bomb
+hoax while piggybacking on a neighbour's wireless network.
+
+
+A Singapore police spokesman told AFP that they "do not
+specifically track offences involving Wi-Fi" but do investigate
+"any allegation of crime as and when it is reported".
+
+
+Garyl Tan's arrest followed a public complaint. Court documents
+said a passer-by called police because he was suspicious of the
+teenager sitting by the road using his laptop late at night.
+
+
+Chua said many freeloaders regard the act as harmless, while
+others may not even be aware they are committing an offence.
+
+
+"The most common perception is that the crime is virtually
+victimless as the 'victim' merely suffers a minor drop in
+Internet speed," he said.
+
+
+There is little publicity about illegal mooching, and the
+piggybacking can happen easily because computers sometimes
+automatically search for the strongest signal, he said.
+
+
+"Even the user may not be aware when the piggybacking is
+happening, let alone (that he is) committing a crime," Chua said.
+
+
+Garyl Tan's prosecution came as the government seeks to broaden
+legitimate Wi-Fi access.
+
+
+Singapore had 779,000 broadband subscribers in January 2007,
+while household broadband penetration was 62.8 percent, according
+to government figures. The city-state has a population of about
+4.4 million.
+
+
+Wireless connectivity is currently available in Singapore homes,
+offices and schools but the government recently said Singapore
+would offer free wireless broadband service in public areas
+starting this year.
+
+
+The programme would increase the number of wireless hotspots from
+900 to 5,000 over two years, said the government, which also aims
+for the city-state to have 90 percent home broadband usage by
+2015.
+
+
+As Singapore moves towards its goal of becoming a centre of the
+information- technology sector, its stance against wireless
+moochers is designed to ensure public confidence in the
+technology infrastructure, said Chua.
+
+
+"From a policy standpoint, Singapore prides itself as an IT hub
+and as such, any reported digital crime would have to be
+prosecuted," he said, while noting Garyl Tan's case resulted from
+a complaint which authorities were bound to investigate.
+
+
+But with the worldwide spread of wireless technology, the
+Singapore lawyer Tan said he expects more cases of wireless
+piggybacking to reach the courts.
+
+
+"There are millions of Wi-Fi networks around the world and it is
+only a matter of time and evidence before more cases surface,"
+Tan said.
+
+
+Garyl Tan's case has emphasised the need for tighter wireless
+network security, said Daniel Seng, a lecturer specialising in IT
+law at the National University of Singapore.
+
+
+"The case heightens awareness about wireless security," he said.
+
+
+None of that was on Garyl Tan's mind when he sat on the kerb
+outside his home at about 2:00 am on May 13 last year.
+
+
+A computer games addict, he had gone outside to piggyback onto
+any available wireless network because his mother had confiscated
+his computer modem, said his lawyer Sam Koh.
+

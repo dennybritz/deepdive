@@ -1,0 +1,89 @@
+
+
+A US federal appeals court on Friday blocked a judge's decision
+to bar Internet telephony firm Vonage from signing up new
+customers as punishment for violating patents of rival Verizon.
+
+
+Vonage won an emergency stay of US District Court Judge Claude
+Hilton's ruling that the company be barred from taking on new
+customers as of April 12.
+
+
+The stay enables Vonage to continue to sign up new customers
+until an appellate court decides on the company's request that
+the stay be made permanent.
+
+
+"We're thrilled," Vonage senior vice president of communications
+Brooke Schulz told AFP.
+
+
+"We are really looking forward to presenting our arguments in
+court."
+
+
+Hilton's ruling would have stopped Vonage from getting new
+customers but let it keep its approximately 2.2 million current
+subscribers while it appealed a jury's verdict that the start-up
+uses technology belonging to Verizon.
+
+
+"Judge Hilton exercised the court's equitable discretion to craft
+a middle path that allows Vonage to continue serving its existing
+customers while protecting Verizon's patents from increased
+infringement during the appeal process," Verizon said in a
+written statement.
+
+
+"We expect Judge Hilton to be affirmed on appeal."
+
+
+Verizon filed suit against the New Jersey-based, cut-rate Voice
+over Internet Protocol (VoIP) company in US District Court for
+the Virginia Eastern District in 2006.
+
+
+Verizon, which has its headquarters in New York City, accused
+Vonage of infringing on five of its patents involving online
+telephony.
+
+
+A two-week trial ended on March 8 with jurors finding that Vonage
+had infringed on three Verizon's patents.
+
+
+The jury ordered the start-up to pay Verizon 58 million dollars
+for its transgressions and to pay Verizon royalties amounting to
+5.5 percent of revenues if it continues using the technology.
+
+
+Vonage depicted the verdict as a victory, emphasizing that
+Verizon had succeeded with only three of its claims and that the
+damages awarded were much less than the 197 million dollars
+Verizon asked for in court.
+
+
+Vonage has appealed the award, arguing that Verizon is due no
+money in the case. Schultz said Vonage expected to get the
+findings against it reversed on appeal.
+
+
+Permanently stopping Hilton's injunction and getting the verdict
+overturned on appeal were seen by analysts as vital to Vonage's
+survival.
+
+
+Losing the legal battle would leave Vonage facing slow death if
+it doesn't make a quick deal with Verizon regarding the disputed
+technology, analysts said.
+
+
+"The question on everyone's mind is will this be the beginning of
+the end for Vonage?" said telecom industry analyst Jeff Kagan.
+
+
+"This is not an industry issue. This is not a VoIP issue. This is
+a Vonage issue. Whether or not Vonage gets through this, the VoIP
+revolution will continue."
+

@@ -1,0 +1,89 @@
+
+
+Result of an Australian National Rugby League match played
+Monday:
+
+
+Canberra Raiders 48 Newcastle Knights 19
+
+
+Sunday
+
+
+Melbourne Storm 30 New Zealand Warriors 12
+
+
+Canterbury Bulldogs 22 Gold Coast Titans 6
+
+
+Sydney Roosters 8 Manly Sea Eagles 30
+
+
+Saturday
+
+
+St. George Illawarra Dragons 18 North Queensland Cowboys 22
+
+
+Cronulla Sharks 16 South Sydney Rabbitohs 26
+
+
+Friday
+
+
+Brisbane Broncos 28 Penrith Panthers 29 (golden point extra time)
+
+
+Parramatta Eels 22 Wests Tigers 20 (golden point extra time)
+
+
+Standings (won, lost, points for, points against, points):
+
+
+Manly                   3  0  81  22   6
+
+
+North Queensland        3  0  88  40   6
+
+
+South Sydney            3  0  75  28   6
+
+
+Melbourne               3  0  80  44   6
+
+
+Penrith                 2  1  69  56   4
+
+
+NZ Warriors             2  1  70  62   4
+
+
+Newcastle               2  1  60  84   4
+
+
+Cronulla                1  2  50  44   2
+
+
+St George Illawarra     1  2  50  56   2
+
+
+Canberra                1  2  70  83   2
+
+
+Bulldogs                1  2  56  71   2
+
+
+Gold Coast              1  2  42  58   2
+
+
+Parramatta              1  2  46  85   2
+
+
+Wests Tigers            0  3  44  59   0
+
+
+Brisbane                0  3  58  76   0
+
+
+Sydney Roosters         0  3  20  91   0
+
