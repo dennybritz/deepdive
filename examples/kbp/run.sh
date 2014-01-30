@@ -3,6 +3,9 @@
 cd "$(dirname $0)/../..";
 ROOT_PATH=`pwd`
 
+# unzip the raw text files
+unzip $ROOT_PATH/examples/kbp/data/text.zip
+
 # prepare the database: create and load tables
 $ROOT_PATH/examples/kbp/prepare_data.sh
 
