@@ -10,4 +10,4 @@ export PGPORT=${PGPORT:-5432}
 export PGHOST=${PGHOST:-localhost}
 
 $ROOT_PATH/examples/smoke/prepare_data.sh
-env SBT_OPTS="-Xmx4g" sbt "run -c examples/smoke/application.conf"
+env /lfs/madmax3/0/czhang/software/sbt/bin/sbt "run -c examples/smoke/application.conf"
