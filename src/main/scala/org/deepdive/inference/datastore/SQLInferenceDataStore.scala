@@ -443,6 +443,7 @@ trait SQLInferenceDataStore extends InferenceDataStore with Logging {
       writer.println(s"""
         DROP VIEW IF EXISTS ${factorDesc.name}_query_user CASCADE;
         CREATE VIEW ${factorDesc.name}_query_user AS ${factorDesc.inputQuery};""")
+
       writer.println(s"""
         DROP TABLE IF EXISTS ${factorDesc.name}_query CASCADE;
         SELECT

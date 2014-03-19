@@ -15,10 +15,54 @@ trait JdbcExtractionDataStore extends ExtractionDataStore[JsObject] with Logging
 
   def queryAsMap[A](query: String, batchSize: Option[Int] = None)
       (block: Iterator[Map[String, Any]] => A) : A = {
-      ds.DB.readOnly { implicit session =>
-        val result = SQL(query).map(_.toMap).list.apply().map(_.mapValues(unwrapSQLType))
-        block(result.iterator)
+      
+      var conn = ds.borrowConnection()
+      conn.setAutoCommit(false)
+      var stmt = conn.createStatement(java.sql.ResultSet.TYPE_FORWARD_ONLY,
+       java.sql.ResultSet.CONCUR_READ_ONLY);
+      stmt.setFetchSize(10000);
+      var rs = stmt.executeQuery(query)
+      var rsmd = rs.getMetaData()
+      var columnCount = rsmd.getColumnCount()
+
+      //var m = Map()
+      var m:Map[String,Any] = Map()
+      var names:Map[Int,String] = Map()
+
+      for ( i <- 1 to columnCount) {
+        var name = rsmd.getColumnName(i)
+        //println("++ " + name)
+        m += (name -> None)
+        names += (i -> name)
       }
+
+      var result: List[Map[String, Any]] = List()
+      while(rs.next()){
+        for ( i <- 1 to columnCount) {
+          //var name = rsmd.getColumnName(i)  //TODO: SLOW
+          m += (names(i) -> rs.getObject(i))
+        }
+        result ::= m.mapValues(unwrapSQLType)
+      }
+
+      /*
+      result = result.map({
+        x => 
+          x.mapValues(unwrapSQLType)
+        })
+      */
+
+      block(result.iterator)
+
+      /*
+      ds.DB.readOnly { implicit session =>
+        val result = SQL(query).map(_.toMap).list.apply().map({
+          x => 
+            //println(x)
+            x.mapValues(unwrapSQLType)
+        })
+        block(result.iterator)
+      }*/
     }
 
     def queryAsJson[A](query: String, batchSize: Option[Int] = None)
@@ -62,9 +106,13 @@ trait JdbcExtractionDataStore extends ExtractionDataStore[JsObject] with Logging
       case x : java.sql.Date => JsString(x.toString)
       case x : Array[_] => JsArray(x.toList.map(x => anyValToJson(x)))
       case x : List[_] => JsArray(x.toList.map(x => anyValToJson(x)))
-      case x : JsObject => x      case x =>
+      case x : JsObject => x      
+      case x =>
         log.error(s"Could not convert ${x.toString} of type=${x.getClass.getName} to JSON")
         JsNull
     }
 
 }
+
+
+
