@@ -21,7 +21,8 @@ class ProtobufSerializer(weightsOuput: OutputStream, variablesOutput: OutputStre
   def addWeight(weightId: Long, isFixed: Boolean, initialValue: Double, desc: String) : Unit = {
     weightBuilder.setId(weightId)
     weightBuilder.setIsFixed(isFixed)
-    if (isFixed) weightBuilder.setInitialValue(initialValue)
+    //if (isFixed) 
+    weightBuilder.setInitialValue(initialValue)
     weightBuilder.setDescription(desc)
     val obj = weightBuilder.build()
     obj.writeDelimitedTo(weightsOuput)
