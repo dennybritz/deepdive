@@ -482,8 +482,14 @@ trait SQLInferenceDataStore extends InferenceDataStore with Logging {
 
       writer.println(s"""
         INSERT INTO ${WeightsTable}(initial_value, is_fixed, description)
-        SELECT DISTINCT ${weightValue}, ${isFixed}, ${weightCmd}
-        FROM ${factorDesc.name}_query;""")
+        SELECT ${weightValue} as a, ${isFixed} as b, ${weightCmd} as c
+        FROM ${factorDesc.name}_query GROUP BY a, b, c ;""")  
+
+      //writer.println(s"""
+      //  INSERT INTO ${WeightsTable}(initial_value, is_fixed, description)
+	    //  SELECT DISTINCT * FROM (
+      //  SELECT ${weightValue}, ${isFixed}, ${weightCmd}
+      //  FROM ${factorDesc.name}_query) nt;""")
 
     }
     // Add index to the weights
